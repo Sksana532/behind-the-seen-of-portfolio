@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>website</title>
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<header>
+<body>
+
+<div class="user">
+	
+  <img src="static/image/{{img}}" alt="Image 1"> 
+  <h3 class="name">{{uname}} </h3>
+  <p class="post">{{ujob_title}}</p>
+</div>
+  <nav class ="navbar">
+    <ul>
+      <li><a href="#home">home</a></li>
+      <li><a href="#about">about</a></li>
+      <li><a href="#education">skills</a></li>
+      <li><a href="#projects">project</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+
+  </nav>
+</header>
+
+<div id="menu" class="fas fa-bars"></div>
+  <section class="home" id="home">
+    <h3>HI THERE !</h3>
+    <h1>I'M<span>{{uname}} </span></h1>
+    <p> </p>
+    <a href="#about"><button class="btn">about me<i class="fas fa-user"></i></button></a>
+  </section>
+
+<section class="about" id="about">
+  <h1 class="heading"><span>about</span> me</h1>
+  <div class="row">
+    <div class="info">
+      <h3><span>name:</span>{{uname}} </h3>
+       <h3><span>qualifiacation:</span>{{clg}}</h3>
+       <h3><span>About you:</span>{{uabout_us}}</h3>
+       
+      <a href="#"><button class="btn">download CV<i class="fas fa-download"></i></button></a>
+    </div>
+    
+        
+  </div>
+</section>
+
+
+<section class="skills" id="skills">
+  <h1 class="heading"><span>my</span>skills</h1>
+
+  <div class="skills-row">
+    <div class="skills-column">
+      <h3 class="title">Coding Skills<span class="animate scroll" style="--i:2;"></span></h3>
+      <div class="skills-box">
+        <div class="skills-content">
+          <div class="progress">
+            <h3>{{uskill1}}<span> 90%</span></h3>
+            <div class="bar"><span></span></div>
+  </div>
+           <div class="progress">
+            <h3>{{uskill2}}<span> 80%</span></h3>
+            <div class="bar"><span></span></div>
+  </div>
+           <div class="progress">
+            <h3>{{uskill3}}<span> 65%</span></h3>
+            <div class="bar"><span></span></div>
+  </div>
+           <div class="progress">
+            <h3>{{uskill4}}<span> 75%</span></h3>
+            <div class="bar"><span></span></div>
+  </div>
+
+        </div>
+        <span class="animate scroll" style="--i:3;"></span>
+      </div>
+    </div>
+
+    <div class="skills-column">
+      <h3 class="title">Professional Skills<span class="animate scroll" style="--i:5;"></span></h3>
+      <div class="skills-box">
+        <div class="skills-content">
+          <div class="progress">
+            <h3>{{uskill5}}<span> 95%</span></h3>
+            <div class="bar"><span></span></div>
+  </div>
+           <div class="progress">
+            <h3>{{uskill6}}<span> 80%</span></h3>
+            <div class="bar"><span></span></div>
+  </div>
+           <div class="progress">
+            <h3>{{uskill7}}<span> 65%</span></h3>
+            <div class="bar"><span></span></div>
+  </div>
+           <div class="progress">
+            <h3>{{uskill8}}<span> 60%</span></h3>
+            <div class="bar"><span></span></div>
+  </div>
+
+        </div>
+<span class="animate scroll" style="--i:6;"></span>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="projects container">
+      <div class="projects-header">
+        <h1 class="heading"><span>Recent</span> projects</h1>
+      </div>
+      <div class=" all-projects">
+
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Project 1</h1>
+            <h2>{{uproject1}}</h2>
+            <p>{{about_project1}}</p>
+          </div>
+          <div class="project-img">
+            <img src="static/image/{{img}}"alt="img">
+          </div>
+        </div>
+        
+     
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Project 2</h1>
+            <h2>{{uproject2}}</h2>
+            <p>{{about_project2}}</p>
+          </div>
+          <div class="project-img">
+            <img src="static/image/{{img}}" alt="img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="contact" id="contact">
+  <h1 class="heading"><span>contact</span> me </h1>
+  <div class="row">
+    <div class="content">
+      <h3 class="title">contact info</h3>
+  <div class="info">
+    <h3><i class="fas fa-envelope"></i>{{uemail}}</h3>
+    <h3><i class="fas fa-phone"></i>{{unumber}}</h3>
+    <h3><i class="fas fa-map-marker-alt"></i>{{uaddress}} </h3>
+  </div>
+    </div>
+    <form action="">
+      <input type="text" placeholder="name" class="box">
+      <input type="email" placeholder="email" class="box">
+      <input type="text" placeholder="project" class="box">
+      <textarea name="" id="" cols="30" rows="10" class="box message" placeholder="message" ></textarea>
+      <button type="submit" class="btn">send <i class="fas fa-paper-plane"></i></button>
+  </div>
+</section>
+
+
+
+
+
+  
+  <script >
+
+$(document).ready(function(){
+  
+  $('#menu').click(function(){
+    $(this).toggleClass('fa-times');
+    $('header').toggleClass('toggle');
+  });
+  $(window).on('scroll load',function(){
+    $('#menu').removeClass('fa-times');
+    $('header').removeClass('toggle');
+
+  if($(window).scrollTop()>0){
+    $('.top').show();
+  }else{
+    $('.top').hide();
+  }
+    
+  });
+
+  
+  $('a[href*="#"]').on('click',function(e){
+    e.preventDefault();
+    $('html, body').animate({
+      scrollTop: $($(this).attr('href')).offset().top,
+    },
+    500,
+   'linear'
+    );
+  });
+});
+
+
+  </script>
+ 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap');
+
+:root{
+  --yellow: #f9ca24;
+}
+.skills{
+  min-height: auto;
+  padding-bottom: 7rem;
+  background: rgb(49, 48, 44);
+}
+.skills h2{
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.skills .skills-row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+.skills-row .skills-column{
+  flex: 1 1 40rem;
+}
+.skills-column .title{
+  position: relative;
+  display: inline-block;
+  font-size: 2.5rem;
+  margin: 0 0 1.5rem;
+}
+.skills-column .skills-box{
+  position: relative;
+}
+.skills-box .skills-content{
+  position: relative;
+  border: .2rem solid floralwhite;
+  border-radius: .6rem;
+  padding: .5rem 1.5rem;
+  z-index: 1;
+  overflow: hidden;
+}
+.skills-box .skills-content::before{
+  
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background:rgb(165, 147, 110);
+  z-index: -1;
+  transition: .5s;
+}
+.skills-box .skills-content:hover::before{
+  width: 100%;
+}
+.skills-content .progress{
+  padding: 1rem 0;
+  
+}
+.skills-content .progress h3{
+  font-size: 1.7rem;
+  display: flex;
+  justify-content: space-between;
+}
+.skills-content .progress h3 span{
+  color:floralwhite }
+
+.skills-content .progress .bar{
+  height: 2.5rem;
+  border-radius: .6rem;
+  border: .2rem solid floralwhite;
+  padding: .5rem;
+  margin: 1rem 0;
+}
+.skills-content .progress .bar span{
+  display: block;
+  height: 100%;
+  border-radius: .3rem;
+  background: floralwhite;
+  
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span{
+  width: 90%;
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span{
+  width: 80%;
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span{
+  width: 65%;
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span{
+  width: 75%;
+}
+.skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span{
+  width: 95%;
+}
+.skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span{
+  width: 80%;
+}
+.skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span{
+  width: 65%;
+}
+.skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span{
+  width: 60%;
+}
+
+*{
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+  
+}
+*::selection{
+  background: var(--yellow);
+  color: #333;
+  
+}
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+html::-webkit-scrollbar{
+  width: 1.4rem;
+}
+html::-webkit-scrollbar-track{
+ background: #222;
+}
+html::-webkit-scrollbar-thumb{
+ background: var(--yellow);
+}
+body{
+  background: #111;
+  overflow-x: hidden;
+  padding-left: 35rem;
+}
+section{
+  min-height: 100vh;
+  padding: 1rem;
+}
+.btn{
+  padding: .7rem 3rem;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 2rem;
+  border-radius: 5rem;
+}
+.btn i{
+  padding: 0 .5rem;
+  font-size: 1.8rem;
+}
+.btn:hover{
+  background: var(--yellow);
+}
+.heading{
+  text-align: center;
+  margin: 0 6rem;
+  font-size: 4rem;
+  padding: 1rem;
+  border-bottom: .1rem solid#fff4;
+  color: #fff;
+}
+.heading span{
+  color: var(--yellow);
+}
+header{
+  position: fixed;
+  top: 0; left: 0;
+  z-index: 1000;
+  height: 100%;
+  width: 35rem;
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  text-align: center;
+}
+header .user img{
+  height: 17rem;
+  width: 17rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 7rem solid var(--yellow);
+}
+header .user .name{
+  font-size: 3.5rem;
+  color: #fff;
+  
+}
+header .user .post{
+  font-size: 2rem;
+  color: #eee;
+}
+header .navbar{
+  width: 100%;
+}
+header .navbar ul{
+  list-style: none;
+  padding: 1rem 3rem;
+  
+}
+header .navbar ul li a{
+  display: block;
+  padding: 1rem;
+  margin: 1.5rem;
+  background: #333;
+  color: #fff;
+  font-size: 2rem;
+  border-radius: 5rem;
+}
+header .navbar ul li a:hover{
+  background: var(--yellow);
+  
+}
+#menu{
+  position: fixed;
+  top: 2rem; right: 2rem;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  font-size: 2.5rem;
+  padding: 1rem 1.5rem;
+  z-index: 1000;
+  display: none;
+}
+
+.home{
+ 
+  width: 100%;
+    height: 100vh;
+    background-image: url("/static/image/pa.jpeg");
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+  
+
+ 
+}
+.home h3{
+  font-size: 2.5rem;
+  color: #fff;
+  
+}
+.home h1{
+  font-size: 5rem;
+  color: #fff;
+  
+}
+.home p{
+  font-size: 2rem;
+  color: #eee;
+  padding: 1rem 0;
+  
+}
+.home h1 span{
+  color: var(--yellow);
+}
+.about .row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+}
+.about .row .info{
+  flex: 1 1 48rem;
+  padding: 2rem 1rem;
+  padding-left: 6rem;
+}
+.about .row .info h3{
+  font-size: 2rem;
+  color: var(--yellow);
+  padding: 1rem 0;
+  font-weight: normal;
+}
+.about .row .info h3 span{
+  color: #eee;
+  padding: 0 .5rem;
+}
+.about .row .counter{
+  flex: 1 1 48rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; 
+}
+.about .row .counter .box{
+  width: 20rem;
+  background: #222;
+  text-align: center;
+  padding: 2rem;
+  margin: 2rem;
+}
+.about .row .counter .box span{
+  font-size: 4rem;
+  color: var(--yellow);
+}
+.about .row .counter .box h3{
+  font-size: 2rem;
+  color: #eee
+}
+.education .box-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  padding-left: 3rem;
+}
+.education .box-container .box{
+  width: 27rem;
+  margin: 4rem 1rem;
+  padding-left: 4rem;
+  border-left: .2rem solid #fff;
+  position: relative;
+}
+.education .box-container .box span{
+  font-size: 1.3rem;
+  background: #222;
+  color: #fff;
+  border-radius: 5rem;
+  padding: .5rem 2.5rem;
+}
+.education .box-container .box h3{
+  font-size: 2rem;
+  color: #fff;
+  padding-top: 1.5rem;
+  
+}
+.education .box-container .box p{
+  font-size: 1.4rem;
+  color: #eee;
+  padding: 1rem 0;
+  
+}
+.education .box-container .box i{
+  position: absolute;
+  top: -1.5rem;left: -2.5rem;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  line-height: 5rem;
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  background: var(--yellow);
+  
+}
+
+
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+ .contact .row .content{
+   flex: 1 1 30rem;
+   padding: 4rem;
+   padding-bottom: 0;
+ }
+ .contact .row form{
+   flex: 1 1 45rem;
+   padding: 2rem;
+   margin: 2rem;
+   margin-bottom: 4rem;
+ }
+.contact .row form .box{
+  padding: 1.5rem;
+  margin: 1rem 0;
+  background: #3333;
+  color: #fff;
+  text-transform: none;
+  font-size: 1.7rem;
+  width: 100%;
+}
+.contact .row form .box::placeholder{
+  text-transform: capitalize;
+}
+.contact .row form .message{
+  height: 15rem;
+  resize: none;
+ 
+}
+ .contact .row .content .title{
+   text-transform: uppercase;
+   color: #fff;
+   font-size: 3rem;
+   padding-bottom: 2rem;
+   
+ }
+ .contact .row .content .info h3{
+   display: flex;
+   align-items: center;
+   font-size: 2rem;
+   color: #eee;
+   padding: 1rem 0;
+   font-weight: normal;
+ }
+ .contact .row .content .info h3 i{
+   padding-right: 1rem;
+   color: var(--yellow);
+ }
+.top{
+  position: fixed;
+  height: 1rem;
+  bottom: 7.5rem; right: 2rem;
+  z-index: 100;
+  display: none;
+}
+
+#projects .project-item {
+		flex-direction: row;
+	}
+	#projects .project-item:nth-child(even) {
+		flex-direction: row-reverse;
+	}
+  #projects .project-item:nth-child(odd) {
+		flex-direction: row-reverse;
+	}
+	#projects .project-item {
+		height: 400px;
+		margin: 0;
+		width: 100%;
+		border-radius: 0;
+	}
+	#projects .all-projects .project-info {
+		height: 100%;
+	}
+	#projects .all-projects .project-img {
+		height: 100%;
+	}
+
+
+/* Services Section */
+#services .services {
+	flex-direction: column;
+	text-align: center;
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+#services .service-top {
+	max-width: 500px;
+	margin: 0 auto;
+}
+#services .service-bottom {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 50px;
+}
+#services .service-item {
+	flex-basis: 80%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	padding: 30px;
+	border-radius: 10px;
+	background-image: url(./img/img-1.png);
+	background-size: cover;
+	margin: 10px 5%;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+#services .service-item::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	opacity: 0.9;
+	z-index: -1;
+}
+#services .service-bottom .icon {
+	height: 80px;
+	width: 80px;
+	margin-bottom: 20px;
+}
+#services .service-item h2 {
+	font-size: 2rem;
+	color: white;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+#services .service-item p {
+	color: white;
+	text-align: left;
+}
+/* End Services Section */
+
+/* Projects section */
+#projects .projects {
+	flex-direction: column;
+	max-width: 1200px;
+	margin:  auto;
+	padding: 100px 0;
+}
+#projects .projects-header h1 {
+	margin-bottom: 50px;
+}
+#projects .project-img img {
+	transition: 0.3s ease transform;
+}
+#projects .project-item:hover .project-img img {
+	transform: scale(1.1);
+}
+
+#projects .project-info {
+	padding: 30px;
+	flex-basis: 50%;
+	height: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	color: white;
+}
+#projects .project-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 80%;
+	margin: 20px auto;
+	overflow: hidden;
+	border-radius: 10px;
+}
+#projects .project-info h1 {
+	font-size: 4rem;
+	font-weight: 500;
+}
+#projects .project-info h2 {
+	font-size: 1.8rem;
+	font-weight: 500;
+	margin-top: 10px;
+}
+
+#projects .project-img {
+	flex-basis: 50%;
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+}
+#projects .project-img:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	opacity: 0.7;
+}
+
+/* End Projects section */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1200px){
+  html{
+    font-size: 55%;
+  }
+  .home{
+    padding: 1rem 4rem;
+  }
+}
+@media (max-width:991px){
+  header{
+    left: -120%;
+  }
+  #menu{
+    display: block;
+  }
+  header.toggle{
+    left: 0%;
+  }
+  body{
+    padding: 0;
+  }
+}
+@media (max-width:768px){
+  html{
+    font-size: 50%;
+  }
+}
+@media (max-width:400px){
+  header{
+    width: 100vw;
+  }
+  .heading{
+    margin: 0 3rem;
+  }
+  .about .row .counter .box{
+    width: 100%;
+  }
+  .education .box-container .box{
+    width: 100%;
+  }
+  .portfolio .box-container .box{
+    width: 100%;
+  }
+  .contact .row form{
+    margin: 3rem 0;
+  }
+}
+
+
+</style>
+ 
+</body>
+  
+</html>

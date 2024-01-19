@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website</title>
+    <!-- CSS-link -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/style.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo"><img src="image/logo.png" alt=""></a>
+
+        <ul class="navmenu">
+            <li><a href="{{url_for('home')}}">home</a></li>
+            <li><a href="{{url_for('design')}}">designs</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">example portfolio</a></li>
+        </ul>
+
+    <div class="nav-icon">
+
+
+      <div class="bx bx-menu" id="menu-icon"></div>
+    </div>
+  </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+     
+    /* Style for form container */
+    .form-container {
+      width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Style for form labels */
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    /* Style for form inputs */
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 5px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+   
+
+        #form-container {
+            background-color: rgba(255, 255, 255, 0.7);
+            width: 35%;
+        }
+
+
+    /* Style for submit button */
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 5px,10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    /* Style for submit button on hover */
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    body{
+      background-color: #9f9e99
+    }
+    .btn{
+    display: inline-block;
+    margin-top: .5rem;
+    border-radius: 0.5rem;
+    background:#020202;
+    color:#eeede5;
+    padding:.5rem 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn:hover{
+  background-color: #faecec;
+  color: #0d0b0b;
+}
+.additional-text-field {
+      margin-top: 10px;
+    }
+    button{
+      background-color: #9f9e99;
+      color: rgb(18, 18, 18);
+      padding: 10px 15px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      margin-top: 1px;
+    }
+  </style>
+
+<div class="form-container" style="padding-top: 4%;">
+  <h1>fill the further information</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+
+      
+   <div id="personal" >
+    <label for="name">name:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="job_title">job_title:</label>
+    <input type="text" id="job_title" name="job_title" required>
+     
+    <label for="email">email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="name">contact:</label>
+    <input type="text" id="contact" name="contact" required>
+
+    <label for="address">address:</label>
+    <input type="text" id="address" name="address" required>
+    <label for="instagram">instagram_ID:</label>
+    <input type="text" id="instagram" name="instagram"> 
+
+    <label for="github">github_ID:</label>
+    <input type="text" id="github" name="github" > 
+
+    
+    
+    <div>
+      <label for="file" style="background-color: #9f9e99;">Upload your piture:</label>
+      <input type="file" id="file" accept="image/*" name="dp">
+    </div>
+    <button class="btn" onclick="tostep2();">NEXT</button>
+
+   </div>
+
+
+
+
+
+   <div id="education" style="display:none;">
+
+    <label for="clg">pursuing or graduate degree:</label>
+    <input type="text" id="clg" name="clg" placeholder="enter you detail ">
+
+    <label for="uni">college or university name:</label>
+    <input type="text" id="uni" name="uni" placeholder="college or university name">
+
+    
+
+
+
+    <label for="skill1">skill1:</label>
+    <input type="text" id="skill1" name="skill1" placeholder="enter your main skill">
+    <label for="skill2">skill2:</label>
+    <input type="text" id="skill2" name="skill2" placeholder="enter your main skill">
+
+    <label for="skill3">skill3:</label>
+    <input type="text" id="skill3" name="skill3" placeholder="enter your  main skill">
+    <label for="skill4">skill4:</label>
+    <input type="text" id="skill4" name="skill4" placeholder="enter your main skill">
+
+    <label for="skill5">skill5:</label>
+    <input type="text" id="skill5" name="skill5" placeholder="enter your  main skill">   
+    <label for="skill"6>skill6:</label>
+    <input type="text" id="skill6" name="skill6" placeholder="enter your main skill">
+     
+    <label for="skill7">skill7:</label>
+    <input type="text" id="skill7" name="skill7" placeholder="enter your  main skill"> 
+    <label for="skill8">skill8:</label>
+    <input type="text" id="skill8" name="skill8" placeholder="enter your main skill">
+
+
+    <button class="btn" onclick="tobackstep1();">BACK</button>
+    <button class="btn" onclick="tostep3();">NEXT</button>
+  </div>
+
+
+
+
+
+        
+<div id="projects" style="display:none;">
+
+    <label for="project1">project_1:</label>
+    <input type="text" id="project1" name="project1" placeholder="enter your main project">
+    <label for="about_project1">about_project1:</label>
+    <textarea id="about_project1" name="about_project1" rows="4" cols="50" required placeholder="write few line about project 1"></textarea>
+   
+        
+
+    <label for="project2">project_2:</label>
+    <input type="text" id="project2" name="project2" placeholder="enter your 2 main project">
+    <label for="about_project2">about_project2:</label>
+    <textarea id="about_project2" name="about_project2" rows="4" cols="50" required placeholder="write few line about project 2"></textarea>
+    
+    
+    <label for="about_us">describe your work or your strong points</label>
+    <textarea id="about_us" name="about_us" rows="4" cols="50" required placeholder="write few line about your work experience "></textarea>
+    
+      <button class="btn" onclick="tobackstep2();">BACK</button>
+      <input type="submit" class="btn" value="Submit"> 
+ </div>
+
+     
+
+   
+ 
+  
+    
+
+    
+
+    
+
+  
+    
+
+    
+
+
+   
+  </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+<script>
+function tostep2(){
+  document.getElementById("personal").style.display="none";
+  document.getElementById("education").style.display="block";
+}
+function tostep3(){
+  document.getElementById("education").style.display="none";
+  document.getElementById("projects").style.display="block";
+}
+
+function tobackstep1(){
+  document.getElementById("education").style.display="none";
+  document.getElementById("personal").style.display="block";
+}
+function tobackstep2(){
+  document.getElementById("education").style.display="block";
+  document.getElementById("projects").style.display="none";
+}
+
+
+
+</script>
+
+    <!-- contact-section -->
+  <section class="contact">
+    <div class="contact-info">
+      <div class="first-info">
+        <img src="image/logo.png" alt="">
+
+        <p>0005 xyz Street Longview, <br> united kingdom 9FGYR</p>
+        <p>0909090909</p>
+        <p>SMCBHDB3080@gmail.com</p>
+
+        <div class="social-icon">
+          <a href="#"><i class='bx bxl-facebook'></i></a>
+          <a href="#"><i class='bx bxl-twitter'></i></a>
+          <a href="#"><i class='bx bxl-instagram'></i></a>
+          <a href="#"><i class='bx bxl-youtube'></i></a>
+          <a href="#"><i class='bx bxl-linkedin'></i></a>
+        </div>
+      </div>
+
+      <div class="second-info">
+        <h4>Support</h4>
+        <p>Contact us</p>
+        <p>About page</p>
+        <p>Size Guide</p>
+        <p>Shopping & Resturns</p>
+      </div>
+     </div>
+  </section>
+
+  <div class="end-text">
+    <p>Copyright © @2022. All Rights Reserved.Designd By SANA.</p>
+  </div>
+</body>
+
+</html>
+
